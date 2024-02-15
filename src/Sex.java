@@ -2,10 +2,13 @@ import java.util.Scanner;
 
 public class Sex {
     public static void main(String[] args){
-        int countOrd = 0;
-        int countRader = 0;
+        int countOrd = 1;
+        int countRader = 1;
+        String text = "";
         Scanner scanner = new Scanner(System.in);
-        String text = scanner.nextLine();
+        while (scanner.hasNextLine()){
+            text = scanner.nextLine();
+        }
         for (int i = 0; i < text.length(); i++){
             if (text.charAt(i) == ' '){
                 countOrd++;
@@ -14,6 +17,6 @@ public class Sex {
                 countRader++;
             }
         }
-        System.out.println("\n" + "Antal ord: " + (countOrd+1) + "\nAntalet ord: " + text.length() + "\nAntalet rader: " + (countRader+1));
+        System.out.println("\nAntal ord: " + countOrd + "\nAntal täcken: " + text.length() + "\nAntal rader: " + countRader);
     }
 }
